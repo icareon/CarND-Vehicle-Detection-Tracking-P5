@@ -14,7 +14,7 @@ from sklearn.cross_validation import train_test_split
 from moviepy.editor import VideoFileClip
 
 train=False
-video=False
+video=True
 
 if train==True and video==False:
 
@@ -147,7 +147,7 @@ if train==False and video==False:
         heat = add_heat(heat, boxes)
 
         # Apply threshold to help remove false positives
-        heat = apply_threshold(heat, 3)
+        heat = apply_threshold(heat, 1)
 
         # Visualize the heatmap when displaying
         heatmap = np.clip(heat, 0, 255)
@@ -205,7 +205,7 @@ if video==True:
         heat = add_heat(heat, boxes)
 
         # Apply threshold to help remove false positives
-        heat = apply_threshold(heat, 5)
+        heat = apply_threshold(heat, 1)
 
         # Visualize the heatmap when displaying
         heatmap = np.clip(heat, 0, 255)
@@ -219,7 +219,7 @@ if video==True:
 
     clip = VideoFileClip("./CarND-Vehicle-Detection/project_video.mp4")
     project_clip = clip.fl_image(main_pipeline)
-    project_clip.write_videofile('project_video_out.mp4',audio=False)
+    project_clip.write_videofile('project_video_out_2.mp4',audio=False)
 
 
 # image generation for writeup

@@ -65,8 +65,9 @@ def extract_features(imgs, color_space='RGB', spatial_size=(32, 32),
     for file in imgs:
         file_features = []
         # Read in each one by one
-        feature_image = cv2.imread(file)
+        image = cv2.imread(file)
         # apply color conversion if other than 'RGB'
+        feature_image = convert_color(image, conv='BGR2YCrCb')
         #func = 'cv2.COLOR_BGR2' + color_space
         #feature_image=cv2.cvtColor(image,eval(func))
         #print(np.min(feature_image),np.max(feature_image))
@@ -103,8 +104,8 @@ def find_cars(img, ystart, ystop, xstart, xstop, scale, svc, X_scaler, orient, p
     #img = img.astype(np.float32) / 255
     bbox=[]
     img_tosearch = img[ystart:ystop, xstart:xstop, :]
-    #ctrans_tosearch = convert_color(img_tosearch, conv='RGB2YCrCb')
-    ctrans_tosearch = img_tosearch
+    ctrans_tosearch = convert_color(img_tosearch, conv='BGR2YCrCb')
+    #ctrans_tosearch = img_tosearch
     if scale != 1:
         imshape = ctrans_tosearch.shape
         ctrans_tosearch = cv2.resize(ctrans_tosearch, (np.int(imshape[1] / scale), np.int(imshape[0] / scale)))
