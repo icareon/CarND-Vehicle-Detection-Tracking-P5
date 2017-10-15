@@ -19,14 +19,14 @@ The code for this step is contained in lines 16 -33 of my `vehicle_det_main_func
 
 I started by reading in all the `vehicle` and `non-vehicle` images in my main function.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
-[car_vs_notcar](./writeup_imgs/car_vs_notcar.png)
+![car_vs_notcar](./writeup_imgs/car_vs_notcar.png)
 
 I then explored different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 
 Here is an example using the `YCrCb` color space and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
-[HOG1](./writeup_imgs/hog_play1.png)
-[HOG2](./writeup_imgs/hog_play2.png)
-[HOG3](./writeup_imgs/hog_play3.png)
+![HOG1](./writeup_imgs/hog_play1.png)
+![HOG2](./writeup_imgs/hog_play2.png)
+![HOG3](./writeup_imgs/hog_play3.png)
 
 ####2. Explain how you settled on your final choice of HOG parameters.
 
@@ -42,7 +42,7 @@ After I extracted my features to train my SVM on from the pretty small pictures,
 
 Ultimately I searched on three scales using a RGB 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
-[Bounding_boxes](./writeup_imgs/bounding_boxes.png)
+![Bounding_boxes](./writeup_imgs/bounding_boxes.png)
 ---
 
 ### Video Implementation
@@ -57,7 +57,7 @@ Here's an example result showing the heatmap from a series of test images (right
 
 ### Here are six images and their corresponding heatmaps and bounding boxes:
 
-[Heat_map](./writeup_imgs/heat_map.png)
+![Heat_map](./writeup_imgs/heat_map.png)
 
 ---
 
