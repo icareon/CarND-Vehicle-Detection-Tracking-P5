@@ -222,27 +222,27 @@ if video==True:
     project_clip.write_videofile('project_video_out.mp4',audio=False)
 
 
-
-# Read in images of cars and notcars
-images = glob.glob('./CarND-Vehicle-Detection/train_images/*/*/*.png')
-cars_full = []
-notcars_full = []
-
-for image in images:
-    if 'non-vehicles' in image:
-        notcars_full.append(image)
-    else:
-        cars_full.append(image)
-
-
-img1=cv2.imread(cars_full[1])
-img2=cv2.imread(notcars_full[1])
-fig=plt.figure(figsize=(10, 5))
-plt.subplot(1,2,1)
-plt.imshow(img1)
-plt.title('Car')
-plt.subplot(1,2,2)
-plt.imshow(img2)
-plt.title('Not Car')
-fig.savefig('./writeup_imgs/car_vs_notcar.png')
-plt.show()
+# image generation for writeup
+# # Read in images of cars and notcars
+# images = glob.glob('./CarND-Vehicle-Detection/train_images/*/*/*.png')
+# cars_full = []
+# notcars_full = []
+#
+# for image in images:
+#     if 'non-vehicles' in image:
+#         notcars_full.append(image)
+#     else:
+#         cars_full.append(image)
+#
+#
+# img1=cv2.imread(cars_full[1])
+# img2=cv2.imread(notcars_full[1])
+# fig=plt.figure(figsize=(10, 5))
+# plt.subplot(1,2,1)
+# plt.imshow(img1)
+# plt.title('Car')
+# plt.subplot(1,2,2)
+# plt.imshow(img2)
+# plt.title('Not Car')
+# fig.savefig('./writeup_imgs/car_vs_notcar.png')
+# plt.show()
