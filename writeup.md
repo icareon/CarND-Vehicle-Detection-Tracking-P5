@@ -24,6 +24,7 @@ I started by reading in all the `vehicle` and `non-vehicle` images in my main fu
 I then explored different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 
 Here is an example using the `YCrCb` color space and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
+
 ![HOG1](./writeup_imgs/hog_play1.png)
 ![HOG2](./writeup_imgs/hog_play2.png)
 ![HOG3](./writeup_imgs/hog_play3.png)
