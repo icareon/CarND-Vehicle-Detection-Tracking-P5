@@ -39,7 +39,7 @@ I trained a linear SVM using all features that the pipeline provided (Spatial, H
 
 After I extracted my features to train my SVM on from the pretty small pictures, I moved on to car detection in larger images. For this, I implemented a sliding window search in my `find_cars` function in lines 116 to 126 in my `vehicle_det_main_funcs.py` file. At first I only worked on the 1.5 scale but I found that to not be optimal so I implemented multiple searches on 1, 1.5, and 2.0 scales.
 
-Ultimately I searched on three scales using a RGB 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+Ultimately I searched on three scales using a YCrCB 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
 ![Bounding_boxes](./writeup_imgs/bounding_boxes.png)
 ---
