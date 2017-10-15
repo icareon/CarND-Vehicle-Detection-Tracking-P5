@@ -29,15 +29,15 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 ![HOG2](./writeup_imgs/hog_play2.png)
 ![HOG3](./writeup_imgs/hog_play3.png)
 
-####2. Explain how you settled on your final choice of HOG parameters.
+#### Explain how you settled on your final choice of HOG parameters.
 
 I tried various combinations of parameters but decided to stick with the default parameters as they were giving me pretty good results later down in the pipeline.
 
-####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+#### Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
 I trained a linear SVM using all features that the pipeline provided (Spatial, Histogram and Hog features). This gave me a pretty large feature vector.
 
-###Sliding Window Search
+### Sliding Window Search
 
 After I extracted my features to train my SVM on from the pretty small pictures, I moved on to car detection in larger images. For this, I implemented a sliding window search in my `find_cars` function in lines 116 to 126 in my `vehicle_det_main_funcs.py` file. At first I only worked on the 1.5 scale but I found that to not be optimal so I implemented multiple searches on 1, 1.5, and 2.0 scales.
 
@@ -62,9 +62,9 @@ Here's an example result showing the heatmap from a series of test images (right
 
 ---
 
-###Discussion
+### Discussion
 
-####1. Problems / issues you faced in the implementation  
+#### Problems / issues you faced in the implementation  
 
 One issue I encountered at first was that the algorithm kept identifying many false positives. I addressed this by tweaking the parameters, training on the full image set (which took substantially longer), by limiting the search region (to the lower half) and lastly using different scales to achieve better overlaps when a car is identified. I also spent a lot of time, making sure I am in the right color space considering how the images were imported. Ultimately, I got rid of all colorspace conversions and just worked in RGB/BGR.
 
