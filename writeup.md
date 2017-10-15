@@ -25,9 +25,7 @@ I then explored different `skimage.hog()` parameters (`orientations`, `pixels_pe
 
 Here is an example using the `YCrCb` color space and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
 
-![HOG1](./writeup_imgs/hog_play1.png)
-![HOG2](./writeup_imgs/hog_play2.png)
-![HOG3](./writeup_imgs/hog_play3.png)
+![HOG4](./writeup_imgs/hog_play4.png)
 
 #### Explain how you settled on your final choice of HOG parameters.
 
