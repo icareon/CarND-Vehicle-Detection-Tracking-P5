@@ -46,7 +46,7 @@ Ultimately I searched on three scales using a RGB 3-channel HOG features plus sp
 
 ### Video Implementation
 
-Here's a [link to my video result](./project_video_out.mp4)
+Here's a [link to my video result](./project_video_out_2.mp4)
 
 ### Filtering & Heat Maps
 
